@@ -15,8 +15,8 @@ _global_script_class_icons={
 
 [application]
 
-config/name="GodotLab"
-run/main_scene="res://scenes/levels/main.tscn"
+config/name="Paths"
+run/main_scene="res://scenes/screens/main.tscn"
 config/icon="res://assets/icon.png"
 
 [rendering]
