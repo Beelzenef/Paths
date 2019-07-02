@@ -5,29 +5,34 @@
 [ext_resource path="res://assets/buttons/green_sliderLeft.png" type="Texture" id=3]
 [ext_resource path="res://assets/buttons/red_cross.png" type="Texture" id=4]
 
-[node name="Node2D" type="Node2D"]
-position = Vector2( 355.821, 215.764 )
+[node name="Item" type="Button"]
+margin_left = 427.687
+margin_top = 177.811
+margin_right = 554.687
+margin_bottom = 292.811
 script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
 
 [node name="Sprite" type="Sprite" parent="."]
-position = Vector2( -0.935837, -2.50775 )
+position = Vector2( 62.3371, 58.156 )
 scale = Vector2( 2.57678, 2.41474 )
 texture = ExtResource( 2 )
 
 [node name="Content" type="Label" parent="."]
-margin_left = -62.0
-margin_top = -55.0
-margin_right = 57.0
-margin_bottom = 38.0
+margin_left = 7.79596
+margin_top = 12.1868
+margin_right = 126.796
+margin_bottom = 105.187
 text = "this is the first line of your new adventure so I hope you are ready because this is gonna be awesome"
 align = 1
 autowrap = true
 max_lines_visible = 5
 
 [node name="Actions" type="Node2D" parent="."]
-__meta__ = {
-"_edit_group_": true
-}
+visible = false
+position = Vector2( 65.8822, 64.5776 )
 
 [node name="EditButton" type="TextureButton" parent="Actions"]
 margin_left = 68.2331
@@ -50,5 +55,6 @@ margin_left = -87.0
 margin_top = 70.0
 margin_right = 198.0
 margin_bottom = 122.0
+[connection signal="pressed" from="." to="." method="_on_Item_pressed"]
 [connection signal="pressed" from="Actions/EditButton" to="." method="_on_EditButton_pressed"]
 [connection signal="pressed" from="Actions/ClearButton" to="." method="_on_ClearButton_pressed"]
