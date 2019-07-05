@@ -1,0 +1,41 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://scripts/itemSet.gd" type="Script" id=1]
+[ext_resource path="res://assets/buttons/blue_button11.png" type="Texture" id=2]
+[ext_resource path="res://assets/buttons/green_button11.png" type="Texture" id=3]
+[ext_resource path="res://scripts/slotItem.gd" type="Script" id=4]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="."]
+modulate = Color( 1, 1, 1, 0.305882 )
+position = Vector2( 362.841, 290.186 )
+scale = Vector2( 9.75972, 9.12393 )
+texture = ExtResource( 2 )
+
+[node name="AddItem" type="TextureButton" parent="."]
+margin_left = 619.609
+margin_top = 103.845
+margin_right = 668.609
+margin_bottom = 152.845
+texture_normal = ExtResource( 3 )
+
+[node name="Slots" type="Node2D" parent="."]
+position = Vector2( 181.729, 140.191 )
+
+[node name="Slot1" type="Node2D" parent="Slots"]
+script = ExtResource( 4 )
+
+[node name="Slot2" type="Node2D" parent="Slots"]
+position = Vector2( 229.493, -2.22809 )
+script = ExtResource( 4 )
+
+[node name="Slot3" type="Node2D" parent="Slots"]
+position = Vector2( 8.91235, 162.65 )
+script = ExtResource( 4 )
+
+[node name="Slot4" type="Node2D" parent="Slots"]
+position = Vector2( 229.493, 164.878 )
+script = ExtResource( 4 )
+[connection signal="pressed" from="AddItem" to="." method="_on_AddItem_pressed"]
