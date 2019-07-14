@@ -21,21 +21,19 @@ margin_right = 668.609
 margin_bottom = 152.845
 texture_normal = ExtResource( 3 )
 
-[node name="Slots" type="Node2D" parent="."]
+[node name="Slot1" type="Node2D" parent="."]
 position = Vector2( 181.729, 140.191 )
-
-[node name="Slot1" type="Node2D" parent="Slots"]
 script = ExtResource( 4 )
 
-[node name="Slot2" type="Node2D" parent="Slots"]
-position = Vector2( 229.493, -2.22809 )
+[node name="Slot2" type="Node2D" parent="."]
+position = Vector2( 411.222, 137.963 )
 script = ExtResource( 4 )
 
-[node name="Slot3" type="Node2D" parent="Slots"]
-position = Vector2( 8.91235, 162.65 )
+[node name="Slot3" type="Node2D" parent="."]
+position = Vector2( 190.641, 302.841 )
 script = ExtResource( 4 )
 
-[node name="Slot4" type="Node2D" parent="Slots"]
-position = Vector2( 229.493, 164.878 )
+[node name="Slot4" type="Node2D" parent="."]
+position = Vector2( 411.222, 305.069 )
 script = ExtResource( 4 )
 [connection signal="pressed" from="AddItem" to="." method="_on_AddItem_pressed"]
