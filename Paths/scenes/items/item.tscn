@@ -6,7 +6,11 @@
 [ext_resource path="res://assets/buttons/red_cross.png" type="Texture" id=4]
 
 [node name="Item" type="Node2D"]
+position = Vector2( 400.795, 188.092 )
 script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
 
 [node name="HideActionsButton" type="Button" parent="."]
 margin_right = 125.0
@@ -46,12 +50,15 @@ margin_bottom = 6.71896
 texture_normal = ExtResource( 4 )
 expand = true
 
-[node name="EditContent" type="TextEdit" parent="Actions"]
+[node name="EditContent" type="LineEdit" parent="Actions"]
 visible = false
 margin_left = -87.0
 margin_top = 70.0
 margin_right = 198.0
 margin_bottom = 122.0
+max_length = 30
+clear_button_enabled = true
+placeholder_text = "Insert your event/character"
 [connection signal="pressed" from="HideActionsButton" to="." method="_on_HideActions_Button_pressed"]
 [connection signal="pressed" from="Actions/EditButton" to="." method="_on_EditButton_pressed"]
 [connection signal="pressed" from="Actions/ClearButton" to="." method="_on_ClearButton_pressed"]
