@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://scripts/asset.gd" type="Script" id=1]
+[ext_resource path="res://assets/buttons/red_button08.png" type="Texture" id=2]
+[ext_resource path="res://scenes/items/item.tscn" type="PackedScene" id=3]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource( 1 )
+AssetTitle = ""
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 473.257, 241.922 )
+scale = Vector2( 5.12156, 4.8653 )
+texture = ExtResource( 2 )
+
+[node name="Item" parent="." instance=ExtResource( 3 )]
+position = Vector2( 413.352, 193.324 )
+
+[node name="Title" type="Label" parent="."]
+margin_left = 362.102
+margin_top = 135.706
+margin_right = 584.102
+margin_bottom = 173.706
+align = 1
+valign = 1
